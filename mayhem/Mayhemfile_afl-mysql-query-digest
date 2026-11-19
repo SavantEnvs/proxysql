@@ -1,0 +1,9 @@
+project: savantenvs/proxysql
+target: afl-mysql-query-digest
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/afl-mysql-query-digest/testsuite
+cmds:
+  - cmd: /mayhem/afl_mysql_query_digest -d 1 -l 1 -n 1 -s 128 -g 3 -G 3 -c 0
+    afl: true
+    timeout: 5

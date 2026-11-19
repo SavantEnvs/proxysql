@@ -1,0 +1,9 @@
+project: savantenvs/proxysql
+target: fuzz-mysql-resultset-framer
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-mysql-resultset-framer/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_mysql_resultset_framer
+    libfuzzer: true
+    timeout: 5

@@ -1,0 +1,9 @@
+project: savantenvs/proxysql
+target: fuzz-gtid
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-gtid/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_gtid
+    libfuzzer: true
+    timeout: 5

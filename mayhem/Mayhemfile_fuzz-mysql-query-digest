@@ -1,0 +1,9 @@
+project: savantenvs/proxysql
+target: fuzz-mysql-query-digest
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-mysql-query-digest/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_mysql_query_digest
+    libfuzzer: true
+    timeout: 5

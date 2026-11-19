@@ -1,0 +1,1 @@
+ÿBEGIN; SET LOCAL search_path = public; COPY t FROM STDIN; COMMIT

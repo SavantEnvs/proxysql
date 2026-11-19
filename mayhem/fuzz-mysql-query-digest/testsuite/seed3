@@ -1,0 +1,2 @@
+ÿselect @@version; SET NAMES utf8mb4; # hash comment
+select 0x1F, b'01', X'ab'

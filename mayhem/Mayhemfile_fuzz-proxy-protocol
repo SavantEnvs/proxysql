@@ -1,0 +1,9 @@
+project: savantenvs/proxysql
+target: fuzz-proxy-protocol
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-proxy-protocol/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_proxy_protocol
+    libfuzzer: true
+    timeout: 5

@@ -1,0 +1,9 @@
+project: savantenvs/proxysql
+target: fuzz-pgsql-response-framer
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-pgsql-response-framer/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_pgsql_response_framer
+    libfuzzer: true
+    timeout: 5
